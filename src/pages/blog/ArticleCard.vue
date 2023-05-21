@@ -1,5 +1,5 @@
 <template>
-  <article class="card">
+  <div class="card">
     <div class="card-image">
       <figure class="image is-16by9">
         <slot name="image" />
@@ -25,7 +25,7 @@
         <time :datetime="seoCreatedDate">{{ createdDateLocal }}</time>
       </p>
     </div>
-  </article>
+  </div>
 </template>
 
 <script lang="ts">
