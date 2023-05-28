@@ -9,7 +9,7 @@
     </template>
 
     <figure class="image is-fullwidth">
-      <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*x1rQnsmCo0DQZzYA3pGTfg.png" alt="">
+      <img src="@/assets/images/blog/cron-jobs-with-sg/head-image.webp" alt="" />
     </figure>
     <p>This article will describe how to import your Cron jobs to <a href="https://saasglue.com/solutions">SaaSGlue</a>
       in five minutes or less. To see how it works in action, watch the 2 1/2 minute demo video at the end of this
@@ -40,7 +40,7 @@
       upcoming
       jobs in the dashboard.</p>
     <figure class="image is-fullwidth">
-      <img src="https://miro.medium.com/v2/resize:fit:720/1*xk-7AI0-bDRCFho42hQzcg.gif" alt="" />
+      <img src="@/assets/images/blog/cron-jobs-with-sg/gif1.gif" alt="" />
     </figure>
     <p>Unlike many software automation solutions SaaSGlue does not require installing and configuring a server. To
       import your Cron jobs to SaaSGlue you simply sign up for a free account, download and install the secure,
@@ -62,12 +62,12 @@
       securely connect to the SaaSGlue service over https. There are no incoming connections to the agent, so no
       firewall configuration is required.</p>
     <figure class="image is-fullwidth">
-      <img src="https://miro.medium.com/v2/resize:fit:720/1*xlABuVlN8Xs6N-jexgnFWw.gif" alt="" />
+      <img src="@/assets/images/blog/cron-jobs-with-sg/gif2.gif" alt="" />
     </figure>
     <p>Now follow the instructions on the “Download Agent” tab of the web console to download and install the agent.
       After installing the agent you'll see your machine in the Agent tab of the console.</p>
     <figure class="image is-fullwidth">
-      <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*jrz9RMlPInif6VFO8DN1gg.png" alt="" />
+      <img src="@/assets/images/blog/cron-jobs-with-sg/img1.webp" alt="" />
     </figure>
     <h3>Step 3: Import your Cron jobs</h3>
     <p>After clicking the “Import” button next to your machine name, a dialog box will show the Cron jobs currently
@@ -89,7 +89,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Article from './Article.vue';
+import Article from '../Article.vue';
 
 export default defineComponent({
   name: 'time-for-a-change-manage-and-monitor-your-cron-jobs-in-the-cloud-with-saasglue',

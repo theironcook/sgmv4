@@ -28,7 +28,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import ArticleCard from './ArticleCard.vue';
+import ArticleCard from '../ArticleCard.vue';
 
 export default defineComponent({
   name: 'Blog',
