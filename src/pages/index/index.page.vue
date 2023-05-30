@@ -44,7 +44,7 @@
             <div class="columns is-size-5-desktop is-size-6-touch has-text-centered">
                 <div class="column">
                     <figure class="image is-3by1">
-                        <img src="@/assets/images/integration.svg" width="180" height="165" />
+                        <img src="@/assets/images/integration.svg" width="180" height="165" alt="SaaSGlue integration" />
                     </figure>
                     <h2 class="py-2 title has-text-centered has-text-white">Integration</h2>
                     <div class="is-inline-block has-text-left-touch has-text-centered">
@@ -55,7 +55,7 @@
                 </div>
                 <div class="column">
                     <figure class="image is-3by1">
-                        <img src="@/assets/images/orchestration.svg" width="210" height="160" />
+                        <img src="@/assets/images/orchestration.svg" width="210" height="160" alt="SaaSGlue orchestration" />
                     </figure>
                     <h2 class="py-2 title has-text-centered has-text-white">Orchestration</h2>
                     <div class="is-inline-block has-text-left-touch has-text-centered">
@@ -66,7 +66,7 @@
                 </div>
                 <div class="column">
                     <figure class="image is-3by1">
-                        <img src="@/assets/images/automation.svg" width="150" />
+                        <img src="@/assets/images/automation.svg" width="150" alt="SaaSGlue automation" />
                     </figure>
                     <h2 class="py-2 title has-text-centered has-text-white">Automation</h2>
                     <div class="is-inline-block has-text-left-touch has-text-centered">
@@ -84,7 +84,7 @@
                 <div class="column is-half">
                     <h3 class="subtitle has-text-weight-semibold is-flex is-align-items-center is-justify-content-center">
                         <figure class="image is-48x48 mr-4">
-                            <img src="@/assets/images/network-icon-world.svg" />
+                            <img src="@/assets/images/network-icon-world.svg" alt="Network icon" />
                         </figure>
                         <span class="is-flex-shrink-0">Works virtually anywhere</span>
                     </h3>
@@ -94,7 +94,7 @@ This simple design lets the agent work on almost any network. And since agents t
                 <div class="column is-half">
                     <h3 class="subtitle has-text-weight-semibold is-flex is-align-items-center is-justify-content-center">
                         <figure class="image is-48x48 mr-4">
-                            <img src="@/assets/images/network-icon-serverandpcs.svg" />
+                            <img src="@/assets/images/network-icon-serverandpcs.svg" alt="Infrastructure icon" />
                         </figure>
                         <span class="is-flex-shrink-0">Provides all the infrastructure</span>
                     </h3>
@@ -105,7 +105,7 @@ This simple design lets the agent work on almost any network. And since agents t
                 <div class="column is-half">
                     <h3 class="subtitle has-text-weight-semibold is-flex is-align-items-center is-justify-content-center">
                         <figure class="image is-48x48 mr-4">
-                            <img src="@/assets/images/network-icon-plugs.svg" />
+                            <img src="@/assets/images/network-icon-plugs.svg" alt="Integration icon" />
                         </figure>
                         <span class="is-flex-shrink-0">Integrates with other solutions</span>
                     </h3>
@@ -114,7 +114,7 @@ This simple design lets the agent work on almost any network. And since agents t
                 <div class="column is-half">
                     <h3 class="subtitle has-text-weight-semibold is-flex is-align-items-center is-justify-content-center">
                         <figure class="image is-48x48 mr-4">
-                            <img src="@/assets/images/network-icon-servers.svg" />
+                            <img src="@/assets/images/network-icon-servers.svg" alt="Scalability icon" />
                         </figure>
                         <span class="is-flex-shrink-0">Scalable platform</span>
                     </h3>
