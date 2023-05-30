@@ -5,11 +5,11 @@
       SaaSGlue
     </template>
     <template #tags>
-      <span class="tag is-primary">Cron</span>
+      <span v-for="tag in tags" class="tag is-primary">{{ tag }}</span>
     </template>
 
     <figure class="image is-fullwidth">
-      <img src="@/assets/images/blog/cron-jobs-with-sg/head-image.webp" alt="" />
+      <img src="@/assets/images/blog/cron-jobs-with-sg/head-image.webp" alt="Head image" />
     </figure>
     <p>This article will describe how to import your Cron jobs to <a href="https://saasglue.com/solutions">SaaSGlue</a>
       in five minutes or less. To see how it works in action, watch the 2 1/2 minute demo video at the end of this
@@ -40,7 +40,7 @@
       upcoming
       jobs in the dashboard.</p>
     <figure class="image is-fullwidth">
-      <img src="@/assets/images/blog/cron-jobs-with-sg/gif1.gif" alt="" />
+      <img src="@/assets/images/blog/cron-jobs-with-sg/gif1.gif" alt="Cron jobs with SaaSGlue" />
     </figure>
     <p>Unlike many software automation solutions SaaSGlue does not require installing and configuring a server. To
       import your Cron jobs to SaaSGlue you simply sign up for a free account, download and install the secure,
@@ -62,12 +62,12 @@
       securely connect to the SaaSGlue service over https. There are no incoming connections to the agent, so no
       firewall configuration is required.</p>
     <figure class="image is-fullwidth">
-      <img src="@/assets/images/blog/cron-jobs-with-sg/gif2.gif" alt="" />
+      <img src="@/assets/images/blog/cron-jobs-with-sg/gif2.gif" alt="Access key creation" />
     </figure>
     <p>Now follow the instructions on the “Download Agent” tab of the web console to download and install the agent.
       After installing the agent you'll see your machine in the Agent tab of the console.</p>
     <figure class="image is-fullwidth">
-      <img src="@/assets/images/blog/cron-jobs-with-sg/img1.webp" alt="" />
+      <img src="@/assets/images/blog/cron-jobs-with-sg/img1.webp" alt="Active agents list" />
     </figure>
     <h3>Step 3: Import your Cron jobs</h3>
     <p>After clicking the “Import” button next to your machine name, a dialog box will show the Cron jobs currently
@@ -89,11 +89,19 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 import Article from '../Article.vue';
+import { Tag } from '../articles';
 
 export default defineComponent({
   name: 'time-for-a-change-manage-and-monitor-your-cron-jobs-in-the-cloud-with-saasglue',
-  components: { Article }
+  components: { Article },
+
+  computed: {
+    tags (): Tag[] {
+      return [Tag.CRON, Tag.SOFT_DEV, Tag.AUTO_SOFT, Tag.SAAS, Tag.SAAS_TOOLS];
+    }
+  }
 });
 </script>
 

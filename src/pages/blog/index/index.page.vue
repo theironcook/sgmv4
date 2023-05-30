@@ -5,18 +5,18 @@
 
       <div class="columns is-multiline">
         <div class="column is-3">
-          <ArticleCard articleUrl="/blog/time-for-a-change-manage-and-monitor-your-cron-jobs-in-the-cloud-with-saasglue" author="Richard Wood" :createdDate="new Date(2022, 9, 22)">
+          <ArticleCard v-for="article in articles" :articleUrl="article.uri" :author="article.author" :createdDate="new Date(article.date)">
             <template #image>
-              <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*x1rQnsmCo0DQZzYA3pGTfg.png" alt="Image" />
+              <img :src="article.image" alt="Article image" />
             </template>
             <template #title>
-              Time for a Change: Manage and Monitor Your Cron Jobs in the Cloud with SaaSGlue
+              {{ article.title }}
             </template>
             <template #description>
-              This article will describe how to import your Cron jobs to SaaSGlue in five minutes or less. To see how it works in action
+              {{ article.description }}
             </template>
             <template #tags>
-              <span class="tag is-primary">Cron</span>
+              <span v-for="tag in article.tags" class="tag is-primary">{{ tag }}</span>
             </template>
           </ArticleCard>
         </div>
@@ -29,9 +29,16 @@
 import { defineComponent } from 'vue';
 
 import ArticleCard from '../ArticleCard.vue';
+import articles from '../articles';
 
 export default defineComponent({
   name: 'Blog',
-  components: { ArticleCard }
+  components: { ArticleCard },
+
+  computed: {
+    articles (): any {
+      return articles;
+    }
+  }
 });
 </script>
