@@ -1,6 +1,6 @@
 import cronJobsWithSgHeadImage from '@/assets/images/blog/cron-jobs-with-sg/head-image.webp';
 
-interface Article {
+export interface Article {
   author: string;
   uri: string;
   date: string;

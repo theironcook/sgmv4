@@ -28,15 +28,15 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
+import articles, { Article } from '../articles';
 import ArticleCard from '../ArticleCard.vue';
-import articles from '../articles';
 
 export default defineComponent({
   name: 'Blog',
   components: { ArticleCard },
 
   computed: {
-    articles (): any {
+    articles (): Article[] {
       return articles;
     }
   }

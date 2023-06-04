@@ -4,24 +4,9 @@
             <div class="columns is-multiline content has-text-right-desktop has-text-centered-touch">
                 <div class="column is-5-desktop is-full-touch has-text-left-desktop">
                     <h5 class="is-uppercase has-text-weight-bold has-text-centered-touch">Recent posts</h5>
-                    <div class="block">
-                        <h6><a target="_blank" href="https://medium.com/@rich_81505/a-better-kubernetes-job-scheduler-ef99c09f5dd">A Better Kubernetes Job Scheduler</a></h6>
-                    </div>
-                    <div class="block">
-                        <h6><a target="_blank" href="https://blog.devops.dev/scale-your-streaming-data-pipelines-efficiently-with-kubernetes-part-2-3e2bc8889eac">Scale your streaming data pipelines efficiently with kubernetes - Part 2</a></h6>
-                    </div>
-                    <div class="block">
-                        <h6><a target="_blank" href="https://blog.devops.dev/scale-your-streaming-data-pipelines-efficiently-with-kubernetes-part-1-ab818be6ebd">Scale your streaming data pipelines efficiently with kubernetes - Part 1</a></h6>
-                    </div>
-                    <div class="block">
-                        <h6><a target="_blank" href="https://medium.com/@rich_81505/minimize-the-cost-of-your-aws-batch-data-pipelines-with-severless-and-ephemeral-compute-7dc883836f9c">Minimize the cost of your AWS batch data pipelines with serverless and ephemeral compute</a></h6>
-                    </div>
-                    <div class="block">
-                        <h6><a target="_blank" href="https://medium.com/@rich_81505/build-a-hybrid-cloud-data-pipeline-in-minutes-43261d07c8a9">How to build a twitter analyzer with a hybrid cloud data pipeline and a single page web app</a></h6>
-                    </div>
-                    <div class="block">
-                        <h6><a target="_blank" href="https://www.dataengineeringpodcast.com/saasglue-cloud-workflow-manager-episode-201/">Podcast - Stick All Of Your Systems And Data Together With SaaSGlue As Your Workflow Manager - Episode 201</a></h6>
-                    </div>
+                    <h6 v-for="article in articles" class="block article-link-block">
+                        <a target="_blank" :title="article.title" :href="article.uri">{{ article.title }}</a>
+                    </h6>
                 </div>
                 <div class="column">
                     <h5 class="is-uppercase has-text-weight-bold">Developers</h5>
@@ -77,30 +62,43 @@
 </template>
 
 <script lang="ts">
-    import { defineComponent } from 'vue';
+import { defineComponent } from 'vue';
+import articles, { Article } from '../pages/blog/articles';
 
-    export default defineComponent({
-        name: 'MainFooter'
-    });
+export default defineComponent({
+    name: 'MainFooter',
+
+    computed: {
+        articles(): Article[] {
+            return articles.slice(-6);
+        }
+    }
+});
 </script>
 
 <style scoped lang="scss">
-    @import 'bulma/sass/utilities/mixins';
+@import 'bulma/sass/utilities/mixins';
 
+.footer {
+    background-color: inherit;
+}
+
+.has-line-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.article-link-block {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@include touch {
     .footer {
-        background-color: inherit;
+        margin-bottom: 4rem;
     }
-
-    .has-line-clamp {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-        overflow: hidden;
-    }
-
-    @include touch {
-        .footer {
-            margin-bottom: 4rem;
-        }
-    }
+}
 </style>
