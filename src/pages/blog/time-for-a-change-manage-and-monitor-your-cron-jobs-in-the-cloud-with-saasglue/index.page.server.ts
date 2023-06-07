@@ -1,7 +1,7 @@
 export function onBeforeRender() {
   return {
     pageContext: {
-      documentProps: { title: '', description: '' }
+      documentProps: { title: 'Manage and Monitor Cron Jobs | SaaSGlue', description: '' }
     }
   };
 }
